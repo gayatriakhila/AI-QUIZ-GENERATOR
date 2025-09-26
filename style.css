@@ -1,0 +1,190 @@
+/* Styling for Marquee and Background */
+.marquee-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1e4383;
+    color: white;
+    padding: 5px 0;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.marquee-container marquee {
+    font-size: 1.0em;
+    font-weight: bold;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    overflow: hidden;
+}
+
+#background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(6px);
+    z-index: -1;
+}
+
+.top-left-image {
+    position: fixed;
+    top: 35px;
+    left: 10px;
+    width: auto;
+    height: auto;
+    display:flex;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.top-left-image img {
+    width: 300px;
+    height: auto;
+    object-fit:initial;
+}
+
+.quiz-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+.page {
+    transition: opacity 0.5s ease-in-out;
+}
+
+h1, h2 {
+    color: #0056b3;
+}
+
+label {
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], select, button {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#question-container {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Question Option Styling */
+#answers-container button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+#answers-container button:hover:not(.selected) {
+    background-color: #e0e0e0;
+}
+
+/* NEW: Highlight for the user's currently selected answer (Point 1) */
+#answers-container button.selected {
+    background-color: #e0f2ff !important; /* Light blue background for selected answer */
+    border: 2px solid #007BFF !important; /* Blue border to show selection */
+    color: #0056b3; /* Darker text for visibility */
+    font-weight: bold;
+}
+
+/* Quiz Results Styles */
+#results-summary-wrapper {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+#results-summary .result-item {
+    border-bottom: 1px dashed #ddd;
+    padding: 10px 0;
+    text-align: left;
+}
+
+#results-summary .result-item:last-child {
+    border-bottom: none;
+}
+
+/* Final Results Page Coloring */
+.correct-answer {
+    color: #4CAF50 !important; /* Green */
+    font-weight: bold;
+}
+
+.incorrect-answer {
+    color: #F44336 !important; /* Red */
+    font-weight: bold;
+}
+
+.no-answer {
+    color: #FFC107 !important; /* Yellow/Orange for skipped questions */
+    font-weight: bold;
+}
+
+/* Ensure immediate feedback color is fully suppressed (for safety) */
+#answers-container button.correct-answer,
+#answers-container button.incorrect-answer {
+    /* These classes are now only used for the final result coloring, 
+       but we keep the styling neutral here just in case. */
+    background-color: #f0f0f0; 
+    color: #333; 
+    border: 1px solid #ccc;
+}

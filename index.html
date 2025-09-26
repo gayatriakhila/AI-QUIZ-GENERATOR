@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Quiz Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="background-container"></div>
+    <div class="marquee-container">
+        <marquee behavior="scroll" direction="left">
+            By Gayatri Akhila Appala-236K1A4204 , Ashok Kumar Goli- 236K1A4223 , Jeevana Sandhya Kakada-236K1A4232 , Sri Dharani Saladi-236K1A4255
+        </marquee>
+    </div>
+    <div class="top-left-image">
+        <img src="logo.png" alt="Quiz Logo">
+    </div>
+    <div class="quiz-container">
+        <div id="start-page" class="page">
+            <h1>Welcome to the AI Quiz!</h1>
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name" placeholder="Your Name">
+            <button id="start-quiz-btn">Login</button>
+        </div>
+
+        <div id="topic-page" class="page" style="display:none;">
+            <h2>Choose a Topic</h2>
+            <select id="topic-select">
+                <option value="">Select here</option>
+                <option value="Science-Computers">Computer Science</option>
+                <option value="science & nature">Science & Nature</option>
+                <option value="general knowledge">General Knowledge</option>
+                <option value="Science-Mathematics">Science-Mathematics</option>
+                <option value="science-gadgets">Science-Gadgets</option>
+                <option value="sports">Sports</option>
+            </select>
+            
+            <h2>Choose Difficulty</h2>
+            <select id="difficulty-select">
+                <option value="easy">Easy (10 min)</option>
+                <option value="medium">Medium (15 min)</option>
+                <option value="hard">Hard (20 min)</option>
+            </select>
+            
+            <button id="start-test-btn">Start Test</button>
+        </div>
+
+        <div id="quiz-page" class="page" style="display:none;">
+            <div id="quiz-header">
+                <h3 id="timer">Time Remaining: 00:00</h3>
+                <h3 id="user-name-display"></h3>
+            </div>
+            <div id="question-container">
+                <h4 id="question-number-display">Question 1 of 10</h4> 
+                <h2 id="question"></h2>
+                <div id="answers-container"></div>
+            </div>
+            
+            <div id="navigation-container" style="display: flex; justify-content: space-between; gap: 20px; margin-top: 20px;">
+                <button id="prev-btn" disabled style="flex: 1;">Previous</button>
+                <button id="next-btn" style="flex: 1;">Next</button>
+            </div>
+            <button id="submit-quiz-btn" style="display: none; width: 100%; margin-top: 15px;">Submit Quiz</button>
+        </div>
+
+        <div id="result-page" class="page" style="display:none;">
+            <h2>Quiz Results</h2>
+            <div id="results-summary-wrapper" style="max-height: 400px; overflow-y: auto; margin-bottom: 20px; padding-right: 10px;">
+                <div id="results-summary"></div>
+            </div>
+            <button id="restart-btn">Exit</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
