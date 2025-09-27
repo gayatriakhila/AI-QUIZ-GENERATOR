@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         question: q.question,
                         answers: answers,
                         correct: q.correct_answer,
-                        // NEW: Store the answer order to determine the correct option letter later
+                        // Store the answer order to determine the correct option letter later
                         shuffled_answers: answers
                     };
                 });
@@ -289,7 +289,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h4>Detailed Results</h4>
         `;
 
-        // 4. Display Detailed Results (Point 4)
+        // 4. Display Detailed Results
         userAnswers.forEach((result, index) => {
             const resultItem = document.createElement('div');
             resultItem.classList.add('result-item');
@@ -336,5 +336,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     restartBtn.addEventListener('click', restartQuiz);
-
 });
