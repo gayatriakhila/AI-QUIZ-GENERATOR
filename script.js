@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Science-Computers': 18,
         'science & nature': 17,
         'general knowledge': 9,
-        'Science-Mathematics:': 19,
+        'Science-Mathematics': 19,
         'sports': 21,
         'science-gadgets': 30,
     };
@@ -336,4 +336,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     restartBtn.addEventListener('click', restartQuiz);
+
 });
