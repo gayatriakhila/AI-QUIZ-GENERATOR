@@ -21,11 +21,10 @@ It allows users to select topics, attempt timed quizzes, and get instant feedbac
 
 📂 Project Structure
 AI-Quiz-Generator/
-│
-├── index.html          # Main HTML file
-├── style.css           # All styling and UI elements
-├── script.js           # JavaScript logic (timer, quiz, results)
-└── Elective/             # (Optional) images, icons, or logos
+├── index.html   # Main HTML file
+├── style.css    # Styling and layout
+├── script.js    # Quiz logic and functions
+└── Elective/      # Images, icons, or logos
 
 ⚙️ How It Works
 
@@ -46,8 +45,10 @@ AI-Quiz-Generator/
 💻 How to Run
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/gayatriakhila/AI-QUIZ-GENERATOR.git
+
 
 2. Open the project folder and run `index.html in your browser.
 3. Select your topic and start the quiz!
